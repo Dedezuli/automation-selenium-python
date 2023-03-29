@@ -1,0 +1,232 @@
+{
+  "id": "f6f4ba7f-80bc-4893-aee5-6169437221ef",
+  "version": "2.0",
+  "name": "latihanku",
+  "url": "https://formy-project.herokuapp.com",
+  "tests": [{
+    "id": "99daeead-b0b5-49f7-a0ae-b5ab77c229ff",
+    "name": "Coba_ide",
+    "commands": [{
+      "id": "b30b14a3-1523-4515-a514-52e0bd0de6ee",
+      "comment": "",
+      "command": "open",
+      "target": "/form",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f3dd12b-efb9-4437-ade0-daf871dd110d",
+      "comment": "",
+      "command": "click",
+      "target": "id=first-name",
+      "targets": [
+        ["id=first-name", "id"],
+        ["css=#first-name", "css:finder"],
+        ["xpath=//input[@id='first-name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52ed7454-8ec0-4cf9-b495-93810997a208",
+      "comment": "",
+      "command": "type",
+      "target": "id=first-name",
+      "targets": [
+        ["id=first-name", "id"],
+        ["css=#first-name", "css:finder"],
+        ["xpath=//input[@id='first-name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "dede"
+    }, {
+      "id": "3dcece8d-75e9-4ab1-b113-f6231a992791",
+      "comment": "",
+      "command": "click",
+      "target": "id=last-name",
+      "targets": [
+        ["id=last-name", "id"],
+        ["css=#last-name", "css:finder"],
+        ["xpath=//input[@id='last-name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "22e27442-264a-4f68-a0b6-795b968441e8",
+      "comment": "",
+      "command": "type",
+      "target": "id=last-name",
+      "targets": [
+        ["id=last-name", "id"],
+        ["css=#last-name", "css:finder"],
+        ["xpath=//input[@id='last-name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "zuliana"
+    }, {
+      "id": "6b2f85e4-98be-42b8-9591-b40ea9b05f27",
+      "comment": "",
+      "command": "click",
+      "target": "id=job-title",
+      "targets": [
+        ["id=job-title", "id"],
+        ["css=#job-title", "css:finder"],
+        ["xpath=//input[@id='job-title']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f49d09f-fdc0-483a-95c1-dbaed195d687",
+      "comment": "",
+      "command": "type",
+      "target": "id=job-title",
+      "targets": [
+        ["id=job-title", "id"],
+        ["css=#job-title", "css:finder"],
+        ["xpath=//input[@id='job-title']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "QA cobacoba"
+    }, {
+      "id": "95a80cf9-5e54-480e-96da-d171a1663957",
+      "comment": "",
+      "command": "click",
+      "target": "id=radio-button-1",
+      "targets": [
+        ["id=radio-button-1", "id"],
+        ["css=#radio-button-1", "css:finder"],
+        ["xpath=//input[@id='radio-button-1']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97949eab-6e47-4373-966f-8c40ca09e3f3",
+      "comment": "",
+      "command": "click",
+      "target": "id=radio-button-2",
+      "targets": [
+        ["id=radio-button-2", "id"],
+        ["css=#radio-button-2", "css:finder"],
+        ["xpath=//input[@id='radio-button-2']", "xpath:attributes"],
+        ["xpath=//div[4]/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a44f1108-e5cc-40c8-8830-5d0c0d47a900",
+      "comment": "",
+      "command": "click",
+      "target": "id=radio-button-3",
+      "targets": [
+        ["id=radio-button-3", "id"],
+        ["css=#radio-button-3", "css:finder"],
+        ["xpath=//input[@id='radio-button-3']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc3cf25c-2c23-43cc-bd2e-ebf0360bc40b",
+      "comment": "",
+      "command": "click",
+      "target": "id=checkbox-2",
+      "targets": [
+        ["id=checkbox-2", "id"],
+        ["css=#checkbox-2", "css:finder"],
+        ["xpath=//input[@id='checkbox-2']", "xpath:attributes"],
+        ["xpath=//div[5]/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "10035dec-877b-46d7-b376-b2b6936f8127",
+      "comment": "",
+      "command": "click",
+      "target": "id=select-menu",
+      "targets": [
+        ["id=select-menu", "id"],
+        ["css=#select-menu", "css:finder"],
+        ["xpath=//select[@id='select-menu']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1ed2e65-84ce-43c8-951d-ed56ee2d9175",
+      "comment": "",
+      "command": "select",
+      "target": "id=select-menu",
+      "targets": [],
+      "value": "label=5-9"
+    }, {
+      "id": "9bc3a681-cb96-47ee-8082-c6990a6244ae",
+      "comment": "",
+      "command": "click",
+      "target": "id=datepicker",
+      "targets": [
+        ["id=datepicker", "id"],
+        ["css=#datepicker", "css:finder"],
+        ["xpath=//input[@id='datepicker']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fc08626-e20e-489d-a141-f79032ac0e4a",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(5) > .day:nth-child(5)",
+      "targets": [
+        ["css=tr:nth-child(5) > .day:nth-child(5)", "css:finder"],
+        ["xpath=//tr[5]/td[5]", "xpath:position"],
+        ["xpath=//td[contains(.,'30')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e79eb2c5-c7d0-4371-96a4-4f0e2f51a38a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Submit",
+      "targets": [
+        ["linkText=Submit", "linkText"],
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Submit')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/thanks')]", "xpath:href"],
+        ["xpath=//div[8]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "858d9345-9280-400c-b38b-f380d8ba406d",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//div[4]/div", "xpath:position"]
+      ],
+      "value": "The form was successfully submitted!"
+    }, {
+      "id": "87c09a1a-9925-456a-a4bd-3a2931030243",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Thanks for submitting your form')]", "xpath:innerText"]
+      ],
+      "value": "Thanks for submitting your form"
+    }, {
+      "id": "77e5ddaa-6e41-45b3-91ac-df3c68f881b8",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c2e15cec-9d4a-4349-a5e5-e38f8648bfef",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["99daeead-b0b5-49f7-a0ae-b5ab77c229ff"]
+  }],
+  "urls": ["https://formy-project.herokuapp.com/"],
+  "plugins": []
+}
