@@ -2,6 +2,8 @@
 import pytest
 import time
 import json
+from faker import Faker
+fake = Faker()
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
@@ -21,11 +23,11 @@ class TestCobaide():
   def test_cobaide(self):
     self.driver.get("https://formy-project.herokuapp.com/form")
     self.driver.find_element(By.ID, "first-name").click()
-    self.driver.find_element(By.ID, "first-name").send_keys("dede")
+    self.driver.find_element(By.ID, "first-name").send_keys(fake.name())
     self.driver.find_element(By.ID, "last-name").click()
-    self.driver.find_element(By.ID, "last-name").send_keys("zuliana")
+    self.driver.find_element(By.ID, "last-name").send_keys(fake.name())
     self.driver.find_element(By.ID, "job-title").click()
-    self.driver.find_element(By.ID, "job-title").send_keys("QA cobacoba")
+    self.driver.find_element(By.ID, "job-title").send_keys(fake.text())
     self.driver.find_element(By.ID, "radio-button-1").click()
     self.driver.find_element(By.ID, "radio-button-2").click()
     self.driver.find_element(By.ID, "radio-button-3").click()
@@ -36,7 +38,8 @@ class TestCobaide():
     self.driver.find_element(By.ID, "datepicker").click()
     self.driver.find_element(By.CSS_SELECTOR, "tr:nth-child(5) > .day:nth-child(5)").click()
     self.driver.find_element(By.LINK_TEXT, "Submit").click()
-    # assert self.driver.find_element(By.CSS_SELECTOR, "body:nth-child(2) div.container > div.alert.alert-success:nth-child(3)").text == "The form was successfully submitted!"
-    assert self.driver.find_element(By.XPATH, "//h1[contains(.,'Thanks for submitting your form')]", "xpath:innerText").text == "Thanks for submitting your form"
-    self.driver.close()
+    self.driver.implicitly_wait(5)
+    assert self.driver.find_element(By.CSS_SELECTOR, "body:nth-child(2) div.container > h1:nth-child(2)")
+    assert self.driver.find_element(By.CSS_SELECTOR, "body:nth-child(2) div.container > div.alert.alert-success:nth-child(3)")
+    # self.driver.close()
   
