@@ -3,7 +3,6 @@ import pytest
 import time
 import json
 from faker import Faker
-fake = Faker()
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
@@ -12,6 +11,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
+fake = Faker()
 class TestCobaide():
   def setup_method(self, method):
     self.driver = webdriver.Chrome()
@@ -41,5 +41,27 @@ class TestCobaide():
     self.driver.implicitly_wait(5)
     assert self.driver.find_element(By.CSS_SELECTOR, "body:nth-child(2) div.container > h1:nth-child(2)")
     assert self.driver.find_element(By.CSS_SELECTOR, "body:nth-child(2) div.container > div.alert.alert-success:nth-child(3)")
-    # self.driver.close()
+    
+  def test_cobaideke2(self):
+    self.driver.get("https://formy-project.herokuapp.com/form")
+    self.driver.find_element(By.ID, "first-name").click()
+    self.driver.find_element(By.ID, "first-name").send_keys(fake.name())
+    self.driver.find_element(By.ID, "last-name").click()
+    self.driver.find_element(By.ID, "last-name").send_keys(fake.name())
+    self.driver.find_element(By.ID, "job-title").click()
+    self.driver.find_element(By.ID, "job-title").send_keys(fake.text())
+    self.driver.find_element(By.ID, "radio-button-1").click()
+    self.driver.find_element(By.ID, "radio-button-2").click()
+    self.driver.find_element(By.ID, "radio-button-3").click()
+    self.driver.find_element(By.ID, "checkbox-2").click()
+    self.driver.find_element(By.ID, "select-menu").click()
+    dropdown = self.driver.find_element(By.ID, "select-menu")
+    dropdown.find_element(By.XPATH, "//option[. = '5-9']").click()
+    self.driver.find_element(By.ID, "datepicker").click()
+    self.driver.find_element(By.CSS_SELECTOR, "tr:nth-child(5) > .day:nth-child(5)").click()
+    self.driver.find_element(By.LINK_TEXT, "Submit").click()
+    self.driver.implicitly_wait(5)
+    assert self.driver.find_element(By.CSS_SELECTOR, "body:nth-child(2) div.container > h1:nth-child(2)")
+    assert self.driver.find_element(By.CSS_SELECTOR, "body:nth-child(2) div.container > div.alert.alert-success:nth-child(3)")
+    
   
